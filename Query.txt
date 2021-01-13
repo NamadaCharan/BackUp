@@ -1,0 +1,10 @@
+
+create table Matches(
+Match_Id int primary key identity(1,1),
+Match_Date Date Not Null,
+First_Team_Name int,
+Second_Team_Name int,
+First_Team_Score int NOT NULL,
+Second_Team_Score int NOT NULL,
+Constraint Fk_First_Team_Name Foreign key(First_Team_Name) references Teams(Team_Id),
+Constraint FK_Second_Team_Name Foreign Key(Second_Team_Name) references Teams(Team_Id)
